@@ -10,15 +10,15 @@ In this Android Repo i will discuss about all the architecture with implementati
 
     It has 3 Components i.e. MODEL-VIEW-CONTROLLER.
   
-    MODEL :
+    𝌭 MODEL :
     Here Model is nothing but a data, it directly manages the data, logic and rules of the application.
     A Model is responsible for managing data of an app.
     
-    VIEW : 
+    ⌗ VIEW : 
     A View in MVC is nothing but a UI design, How you can display the data to the USER screen.
     A view means presentation of the data in a particular format.
     
-    CONTROLLER : 
+    🎮 CONTROLLER : 
     A Controller is typically a piece, which control all the task/event that a user perform, Such as event handling, navigation, Communication between model & view happens in controller in MVC.
     A Controller recieve the input, validate it, & pass the validated input to Model.
 
@@ -41,5 +41,33 @@ In this Android Repo i will discuss about all the architecture with implementati
    will be updated accordingly.
 
    InShort : LoginScreen(View) -> LoginController -> UserModel -> LoginController -> LoginScreen
+
+ 
+   😢 Drawback of MVC in Android Development
+
+   Tight Coupling Between Components:
+      
+   In traditional MVC, the view and the controller can become tightly coupled. This makes the system less flexible and harder to maintain or test. Changes in the view may require changes in the controller and vice 
+   versa. Difficult to Manage Complex UI Logic:
+
+   Poor Separation of Concerns:
+      
+   MVC can sometimes lead to a poor separation of concerns, especially in Android where activities and fragments are responsible for both handling UI and business logic. This can make the code less modular and harder 
+   to maintain.Testability Issues:
+      
+   Because the view and controller are tightly coupled, it can be difficult to write unit tests for the controller without also involving the view. This can lead to more reliance on integration tests, which are 
+   typically harder to write and maintain.
+
+   Lifecycle Management:
+      
+   Android has a complex lifecycle for activities and fragments. The MVC pattern does not inherently provide a way to manage this lifecycle, which can lead to issues with memory leaks, resource management, and 
+   inconsistent states.
+
+   Overuse of Activities/Fragments:
+
+   In many MVC implementations in Android, activities and fragments are often overloaded with responsibilities, handling both UI logic and business logic. This can make them large, unwieldy, and difficult to manage.
+   Limited Scalability:
+     
+
   
  
