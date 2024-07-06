@@ -11,37 +11,27 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.example.androidarchitecture.model.repository.UserRepository
 import com.example.androidarchitecture.ui.theme.AndroidArchitectureTheme
+import com.example.androidarchitecture.view.UserScreen
+import com.example.androidarchitecture.viewmodel.UserViewModel
+import com.example.androidarchitecture.viewmodel.UserViewModelFactory
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            AndroidArchitectureTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            val userRepository = UserRepository()
+            val userViewModel = ViewModelProvider(this, UserViewModelFactory(userRepository))
+                .get(UserViewModel::class.java)
+
+            setContent {
+                UserScreen(userViewModel)
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AndroidArchitectureTheme {
-        Greeting("Android")
-    }
-}
