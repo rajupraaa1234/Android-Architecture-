@@ -67,6 +67,11 @@ In this Android Repo i will discuss about all the architecture with implementati
 
    In many MVC implementations in Android, activities and fragments are often overloaded with responsibilities, handling both UI logic and business logic. This can make them large, unwieldy, and difficult to manage.
    Limited Scalability:
+
+
+2. MVVM - Model View Viewmodel  
+
+  
      
 
   
