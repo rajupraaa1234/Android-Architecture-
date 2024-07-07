@@ -137,6 +137,65 @@ In this Android Repo i will discuss about all the architecture with implementati
          The UserScreen composable function, which is observing the user state, receives the updated user data.
          The UI is recomposed with the new user data, displaying the user's name instead of the "Loading..." message.
 
+
+3. Clean Code Architecture 
+
+      💁 Why MVVM with Clean Architecture?
+         MVVM separates your view (i.e. Activitys and Fragments) from your business logic. MVVM is enough for small projects, but when your codebase becomes huge, your ViewModels start bloating. Separating 
+         responsibilities becomes hard.
+         
+         MVVM with Clean Architecture is pretty good in such cases. It goes one step further in separating the responsibilities of your code base. It clearly abstracts the logic of the actions that can be performed 
+         in your app.
+
+     😇 Advantages of Using Clean Architecture
+         a. Your code is even more easily testable than with plain MVVM.
+         b. Your code is further decoupled (the biggest advantage.)
+         c. The package structure is even easier to navigate.
+         d. The project is even easier to maintain.
+         e. Your team can add new features even more quickly.
+
+      Data Flow in Clean Code Acritecture
+   
+   <img width="724" alt="Screenshot 2024-07-07 at 5 15 19 PM" src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/9afcbd70-4c3b-4870-8ca0-5a2bfcd08889">
+
+
+   <img width="724" alt="Screenshot 2024-07-07 at 5 15 19 PM" src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/a1044861-3a89-4577-b195-05be7252c747">
+   
+
+   <img width="724" alt="Screenshot 2024-07-07 at 5 15 19 PM" src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/9044d3ec-8263-4c75-9c20-22dacff741bf">
+
+
+         Our business logic is completely decoupled from our UI. It makes our code very easy to maintain and test.
+
+     🫥  The Layers of MVVM with Clean Architecture
+   
+         The code is divided into three separate layers:
+         
+         1. Presentation Layer
+         2. Domain Layer
+         3. Data Layer
+
+
+  😑 The Presentation Layer
+   
+      This includes our Activitys, Fragments, and ViewModels. An Activity should be as dumb as possible. Never put your business logic in Activitys.
+      An Activity will talk to a ViewModel and a ViewModel will talk to the domain layer to perform actions. A ViewModel never talks to the data layer directly.
+
+  😑 The Domain Layer
+   
+      The domain layer contains all the use cases of your application. In this example, we have UseCase, an abstract class. All our UseCases will extend this class.
+
+  😑 The Data Layer
+   
+      This has all the repositories which the domain layer can use. This layer exposes a data source API to outside classes:
+
+
+🤩 To check  the Implementation of Clean code architecture you can check in below repo 
+ 
+  link: https://github.com/rajupraaa1234/NoteAppUsingJetPackCompose
+   
+
+
            
      
 
