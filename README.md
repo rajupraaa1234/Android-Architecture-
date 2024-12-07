@@ -49,7 +49,34 @@ In this Android Repo i will discuss about all the architecture with implementati
       
    In traditional MVC, the view and the controller can become tightly coupled. This makes the system less flexible and harder to maintain or test. Changes in the view may require changes in the controller and vice 
    versa. Difficult to Manage Complex UI Logic:
+     
+              Example : 
+               Imagine you're building a simple app to display a user’s name.
 
+               What Happens in MVC?
+               In the Model-View-Controller (MVC) pattern on Android:
+               
+               Model: Holds the data (e.g., the user’s name).
+               View: Displays the data on the screen (e.g., a TextView).
+               Controller: Connects the Model and View (usually the Activity in Android).
+
+               However, in Android MVC, the Activity often acts as both Controller and View. This makes the code tightly coupled.
+
+   <img src="https://github.com/user-attachments/assets/8c9fdbb9-7c46-48b0-9acf-0ad953eaa692" width="600" height="500" />
+
+               Why Is This a Problem?
+
+               a. The Activity is responsible for fetching data (Model) and updating the UI (View).
+               b. This creates a tightly coupled relationship because if you want to change the way data is fetched or displayed, you have to modify the Activity, which violates separation of concerns.
+
+               Simpler Fix
+               😊 Separate the Controller and View responsibilities:
+
+
+   <img src="https://github.com/user-attachments/assets/104aac9a-173a-4d23-a924-00f94cb62b16" width="600" height="600" />
+
+
+               
    Poor Separation of Concerns:
       
    MVC can sometimes lead to a poor separation of concerns, especially in Android where activities and fragments are responsible for both handling UI and business logic. This can make the code less modular and harder 
@@ -69,7 +96,7 @@ In this Android Repo i will discuss about all the architecture with implementati
    Limited Scalability:
 
 
-2. MVVM - Model View Viewmodel
+3. MVVM - Model View Viewmodel
 
       <img src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/d00c2472-20d7-44f7-8765-3e58fa413f7f" width="400" height="500" />
 
@@ -138,7 +165,7 @@ In this Android Repo i will discuss about all the architecture with implementati
          The UI is recomposed with the new user data, displaying the user's name instead of the "Loading..." message.
 
 
-3. Clean Code Architecture 
+4. Clean Code Architecture 
 
       💁 Why MVVM with Clean Architecture?
          MVVM separates your view (i.e. Activitys and Fragments) from your business logic. MVVM is enough for small projects, but when your codebase becomes huge, your ViewModels start bloating. Separating 
