@@ -186,8 +186,8 @@ In this Android Repo i will discuss about all the architecture with implementati
    <img width="724" alt="Screenshot 2024-07-07 at 5 15 19 PM" src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/9afcbd70-4c3b-4870-8ca0-5a2bfcd08889">
 
 
-   <img width="724" alt="Screenshot 2024-07-07 at 5 15 19 PM" src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/a1044861-3a89-4577-b195-05be7252c747">
-   
+   <img width="724" height="682" alt="Screenshot 2026-01-05 at 2 45 13 PM" src="https://github.com/user-attachments/assets/cd7b5905-3c38-40ae-a7f0-a49ec2fbec93" />
+
 
    <img width="724" alt="Screenshot 2024-07-07 at 5 15 19 PM" src="https://github.com/rajupraaa1234/Android-Architecture-/assets/48593134/9044d3ec-8263-4c75-9c20-22dacff741bf">
 
